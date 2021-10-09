@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="container"><br>
+        <center>
+            <h2>Confirm Signup</h2>
+            <p>Please confirm your signup</p>
+        </center>
+    </div>
+
+    <div class="container">
+        <form  action="" method="post" role="form">
+            <div class="form-group">
+
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
+                <br>
+                <label for="code">Code</label>
+                <input type="text" class="form-control" id="code" name="code" placeholder="Enter Code" required>
+
+            </div>
+            <br>													   
+
+            <center>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </center>
+        </form>
+    </div>
+    
+{% endblock %}
