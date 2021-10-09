@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+<div class="container">
+
+    {% block body %}
+
+        <h1>Home</h1>
+
+        {% if session.logged_in %}
+            <li><a href="/logout">Logout</a></li>
+        {% endif %}
+        
+    {% endblock %}
+
+</div>

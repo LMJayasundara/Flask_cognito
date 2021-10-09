@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+<div class="container">
+
+    {% block body %}
+
+        <h1>Signup Form</h1>
+
+        <form action="/signup" method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="text" name="email" placeholder="email" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="submit">
+        </form>
+        
+    {% endblock %}
+
+</div>

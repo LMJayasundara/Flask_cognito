@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPI Recoder</title>
+
+    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for message in messages %}
+                    {% if "Error" not in message[1]: %}
+                        <div class="alert alert-info">
+                            {{ message[1] }}
+                        </div>
+                    {% endif %}
+
+                    {% if "Error" in message[1]: %}
+                        <div class="alert alert-danger">
+                            {{ message[1] }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block body %}{% endblock %}
+    </div>
+
+  </body>
+</html>
